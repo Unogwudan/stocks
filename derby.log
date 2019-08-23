@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Aug 23 18:07:01 WAT 2019:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.13.1.1 - (1765088): instance a816c00e-016c-bf72-1726-0000080b25b0 
+on database directory memory:/home/unogwudan/Documents/workspace-sts-3.9.7.RELEASE/stocks-api/testdb with class loader sun.misc.Launcher$AppClassLoader@764c12b6 
+Loaded from file:/home/unogwudan/.m2/repository/org/apache/derby/derby/10.13.1.1/derby-10.13.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_191-b12
+user.dir=/home/unogwudan/Documents/workspace-sts-3.9.7.RELEASE/stocks-api
+os.name=Linux
+os.arch=amd64
+os.version=4.18.0-25-generic
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
