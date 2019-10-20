@@ -22,7 +22,7 @@ public class StockService {
 	}
 	
 	public Stock getStock(Integer stockId) {
-		return stockRepository.findOne(stockId);
+		return stockRepository.findById(stockId).get();
 	}
 
 	public void addStock(Stock stock) {
@@ -32,7 +32,7 @@ public class StockService {
 	public void updateStock(Integer id, Stock stock) {
 		Stock stockObject = null;
 		try {
-			 stockObject = stockRepository.findOne(id);
+			 stockObject = stockRepository.findById(id).get();
 		}catch(Exception e) {
 			System.out.println("No stock found with given id");
 		}
@@ -41,7 +41,7 @@ public class StockService {
 	}
 	
 	public void deleteStock(Integer id) {
-		stockRepository.delete(id);
+		stockRepository.deleteById(id);
 	}
 
 }
