@@ -13,17 +13,17 @@ stages:
   - job: SecondJob
     steps:
     - bash: echo Build Second Job  
-- stage: Dev Deploy
+- stage: DevDeploy
   jobs:
   - job: DevDeployJob
     steps:
     - bash: echo Dev Deploy
-- stage: QA Deploy
+- stage: QADeploy
   jobs:
   - job: QADeployJob
     steps:
     - bash: echo QA Deploy
-- stage: Prod Deploy
+- stage: ProdDeploy
   jobs:
   - job: ProdDeployJob
     steps:
