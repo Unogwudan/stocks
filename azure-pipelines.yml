@@ -3,13 +3,13 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
-stages: 
+  
+stages:
 - stage: Build
   jobs:
   - job: First Job
     steps:
-    -bash: echo Build First Job
+    - bash: echo Build First Job
   - job: Second Job
     steps:
     - bash: echo Build Second Job  
@@ -29,7 +29,4 @@ stages:
     steps:
     - bash: echo Prod Deploy
 
-steps:
-- script: echo Job 1, worStep 1!
-  displayName: 'Run a one-line script'
   
