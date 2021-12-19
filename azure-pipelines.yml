@@ -15,12 +15,12 @@ stages:
     - bash: echo Build Second Job  
 - stage: DevDeploy
   variables:
-    environment: DevDeploy-Environment
+    environment: DevEnvironment
   dependsOn: Build
   jobs:
   - job: DevDeployJob
     steps:
-    - bash: echo Dev Deploy
+    - bash: echo ${DevEnvironment} Dev Deploy
 - stage: QADeploy
   dependsOn: Build
   jobs:
