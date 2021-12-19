@@ -10,6 +10,14 @@ stages:
   - job: FirstJob
     steps:
     - bash: echo $(EnvironmentVariable) $(Agent.OS) $(Agent.Name) Build First Job
+    - bash: echo $(PipelineLevelVariable)
+    - bash: echo $(Build.BuildNumber)
+    - bash: echo $(Build.BuildId)
+    - bash: echo $(Build.SourceBranchName)
+    - bash: echo $(Build.SourcesDirectory)
+    - bash: echo $(Build.DefaultWorkingDirectory)
+    - bash: ls -R $(Build.SourceBranchName)
+    - bash: echo $(Build.ArtifactStagingDirectory)
   - job: SecondJob
     steps:
     - bash: echo Build Second Job  
