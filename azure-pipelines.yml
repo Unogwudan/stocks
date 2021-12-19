@@ -9,11 +9,13 @@ stages:
   jobs:
   - job: FirstJob
     steps:
-    - bash: echo Build First Job
+    - bash: echo ${EnvironmentVariable} Build First Job
   - job: SecondJob
     steps:
     - bash: echo Build Second Job  
 - stage: DevDeploy
+  variables:
+    environment: DevDeploy-Environment
   dependsOn: Build
   jobs:
   - job: DevDeployJob
