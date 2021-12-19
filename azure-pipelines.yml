@@ -9,7 +9,7 @@ stages:
   jobs:
   - job: FirstJob
     steps:
-    - bash: echo ${EnvironmentVariable} Build First Job
+    - bash: echo $(EnvironmentVariable) Build First Job
   - job: SecondJob
     steps:
     - bash: echo Build Second Job  
@@ -20,7 +20,7 @@ stages:
   jobs:
   - job: DevDeployJob
     steps:
-    - bash: echo ${DevEnvironment} Dev Deploy
+    - bash: echo $(DevEnvironment) Dev Deploy
 - stage: QADeploy
   dependsOn: Build
   jobs:
