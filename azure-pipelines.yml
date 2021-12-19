@@ -9,7 +9,7 @@ stages:
   jobs:
   - job: FirstJob
     steps:
-    - bash: echo $(EnvironmentVariable) Build First Job
+    - bash: echo $(EnvironmentVariable) $(Agent.OS) $(Agent.Name) Build First Job
   - job: SecondJob
     steps:
     - bash: echo Build Second Job  
